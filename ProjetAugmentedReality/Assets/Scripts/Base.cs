@@ -26,4 +26,12 @@ public class Base : MonoBehaviour
             totalBilles++;
         }
     }
+
+    public void AddBilles(int x)
+    {
+        for (int i = 0; i < x; i++)
+        {
+            AddBille();
+        }
+    }
 }

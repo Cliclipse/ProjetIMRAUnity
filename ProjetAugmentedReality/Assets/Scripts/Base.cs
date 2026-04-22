@@ -21,7 +21,12 @@ public class Base : MonoBehaviour
     {
         if (totalBilles < billes.Length)
         {
-            billes[0].SetActive(true);
+            billes[totalBilles].SetActive(true);
+            compteur.AddOne();
+            totalBilles++;
+        }
+        else
+        {
             compteur.AddOne();
             totalBilles++;
         }

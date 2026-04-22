@@ -5,7 +5,7 @@ using UnityEngine;
 public class Compteur : MonoBehaviour
 {
     private int _value = 0;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshPro text;
 
 
     void Start()

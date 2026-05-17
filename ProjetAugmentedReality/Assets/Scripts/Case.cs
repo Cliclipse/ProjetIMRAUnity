@@ -3,20 +3,28 @@ using UnityEngine;
 public class Case : MonoBehaviour
 {
     [SerializeField] private GameObject[] billes;
+    [SerializeField] private int initialNbBilles = 4;
+
     private Compteur compteur;
+    
     private int totalBilles = 0;
+
+    public int getTotalBille()
+    {
+        return totalBilles;
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        totalBilles = initialNbBilles;
         compteur = GetComponentInChildren<Compteur>();
-        AddBilles(4);
+        compteur.SetValue(totalBilles);
+        AddBilles(totalBilles);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void AddBille()
     {
@@ -39,5 +47,11 @@ public class Case : MonoBehaviour
         {
             AddBille();
         }
+    }
+
+    public void Vider()
+    {
+        totalBilles = 0;
+        compteur.SetToZero();
     }
 }

@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/ClipseScene.unity
+  - enabled: 0
+    path: Assets/Scenes/ClipseSceneWebcal.unity
     guid: 79edd290ae17c204686ee20f3ececa2c
+  - enabled: 1
+    path: Assets/Scenes/ClipseTentativeARMobilAvortee.unity
+    guid: b5738401023b2dd409eded308f85f251
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f43371bc8e24d0a448bf4efd5fa16902, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: cff270cc519777745af4b2e7b078ab5d, type: 2}

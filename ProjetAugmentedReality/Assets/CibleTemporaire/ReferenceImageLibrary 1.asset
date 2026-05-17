@@ -10,20 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
-  m_Name: ReferenceImageLibrary
+  m_Name: ReferenceImageLibrary 1
   m_EditorClassIdentifier: 
-  m_GuidLow: 5226162156300893109
-  m_GuidHigh: 15078447973420219806
+  m_GuidLow: 4713887457957816558
+  m_GuidHigh: 17937300061872301486
   m_DataStore:
     m_Storage: []
-  m_Images:
-  - m_SerializedGuid:
-      m_GuidLow: 4904264145566494489
-      m_GuidHigh: 14109601343236930232
-    m_SerializedTextureGuid:
-      m_GuidLow: 8805766700140531225
-      m_GuidHigh: 8633072991557667130
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: pingouin
-    m_Texture: {fileID: 0}
+  m_Images: []

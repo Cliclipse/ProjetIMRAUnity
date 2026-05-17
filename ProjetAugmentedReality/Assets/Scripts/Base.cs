@@ -21,7 +21,7 @@ public class Base : MonoBehaviour
         foreach (GameObject bille in billes)
         {
             // Sécurité au cas où un élément du tableau serait vide dans l'émetteur
-            if (bille != null && bille.activeSelf)
+            if (bille.activeSelf)
             {
                 count++;
             }
@@ -38,10 +38,9 @@ public class Base : MonoBehaviour
     {
         for (int i = 0; i < billes.Length; i++)
         {
-            if (billes[i] != null)
-            {
-                billes[i].SetActive(i < amount);
-            }
+            
+            billes[i].SetActive(i < amount);
+            
         }
     }
 
@@ -50,7 +49,7 @@ public class Base : MonoBehaviour
         int billesAjoutees = 0;
         foreach (GameObject bille in billes)
         {
-            if (bille != null && !bille.activeSelf)
+            if (!bille.activeSelf)
             {
                 bille.SetActive(true);
                 billesAjoutees++;

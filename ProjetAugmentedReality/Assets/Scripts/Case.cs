@@ -16,15 +16,15 @@ public class Case : MonoBehaviour
     {
         compteur = GetComponentInChildren<Compteur>();
         rend = GetComponent<Renderer>();
-        couleurOriginale = rend.material.color; // On sauvegarde la couleur de base
+        couleurOriginale = rend.material.color; 
 
-        // Initialisation de l'Awalé : 4 billes par case
+
         SetBilles(4);
     }
 
     void Update()
     {
-        // On parcourt la liste des transforms pour compter les billes actives
+
         int count = 0;
         foreach (Transform bille in billes)
         {
@@ -41,7 +41,7 @@ public class Case : MonoBehaviour
         }
     }
 
-    // Fonction pour définir un nombre précis de billes (au démarrage ou lors d'un semis)
+
     public void SetBilles(int amount)
     {
         for (int i = 0; i < billes.Count; i++)
@@ -52,7 +52,7 @@ public class Case : MonoBehaviour
 
     public void AddBille()
     {
-        // On active la première bille inactive trouvée
+
         foreach (Transform bille in billes)
         {
             if (!bille.gameObject.activeSelf)
@@ -63,7 +63,6 @@ public class Case : MonoBehaviour
         }
     }
 
-    // Vide la case et retourne le nombre de billes prises
     public int TakeAllBilles()
     {
         int prises = totalBilles;
@@ -74,23 +73,22 @@ public class Case : MonoBehaviour
         return prises;
     }
 
-    // --- GESTION DE LA SOURIS ---
+
 
     private void OnMouseEnter()
     {
-        // Se colore en vert si on la survole (et qu'elle n'est pas vide, optionnel)
         rend.material.color = Color.green;
     }
 
     private void OnMouseExit()
     {
-        // Reprend sa couleur normale
+
         rend.material.color = couleurOriginale;
     }
 
     private void OnMouseDown()
     {
-        // Quand on clique dessus, on prévient le manager du jeu
+
         AwaleManager.Instance.JouerCoup(this);
     }
 }

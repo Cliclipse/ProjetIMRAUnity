@@ -6,7 +6,7 @@ public class Compteur : MonoBehaviour
 {
     private int _value = 0;
     [SerializeField] private TextMeshPro text;
-
+    
 
     void Start()
     {
@@ -28,7 +28,6 @@ public class Compteur : MonoBehaviour
     {
         _value = x;
         UpdateValue();
-
     }
 
     public void AddOne()

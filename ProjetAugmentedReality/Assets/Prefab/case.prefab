@@ -1197,7 +1197,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4076340201571422319}
-  - component: {fileID: 8994118535047226316}
   m_Layer: 0
   m_Name: case
   m_TagString: Untagged
@@ -1236,35 +1235,6 @@ Transform:
   - {fileID: 7161453833495475968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8994118535047226316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151454945133091194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7125da818204a429bac5246b0fb032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  billes:
-  - {fileID: 1182473164618284933}
-  - {fileID: 556876073910568843}
-  - {fileID: 6645692728086466106}
-  - {fileID: 8793840551122022426}
-  - {fileID: 6307790752387197202}
-  - {fileID: 7070538282096401483}
-  - {fileID: 9111320326325376509}
-  - {fileID: 1945294618794948015}
-  - {fileID: 9102743678667506126}
-  - {fileID: 9222936825334145384}
-  - {fileID: 1973020760208122712}
-  - {fileID: 3103634275638801920}
-  - {fileID: 6787557379664377695}
-  - {fileID: 5648391384519304363}
-  - {fileID: 1016358011865236851}
-  initialNbBilles: 4
 --- !u!1 &8793840551122022426
 GameObject:
   m_ObjectHideFlags: 0

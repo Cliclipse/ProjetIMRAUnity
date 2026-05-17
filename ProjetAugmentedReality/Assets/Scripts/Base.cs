@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-    // On garde GameObject[] pour que Unity retrouve tes assignations automatiquement !
     [SerializeField] private GameObject[] billes;
     private Compteur compteur;
 
@@ -11,7 +10,6 @@ public class Base : MonoBehaviour
     void Start()
     {
         compteur = GetComponentInChildren<Compteur>();
-        // Au début du jeu, la base de stockage est vide
         SetBilles(0);
     }
 
@@ -20,7 +18,6 @@ public class Base : MonoBehaviour
         int count = 0;
         foreach (GameObject bille in billes)
         {
-            // Sécurité au cas où un élément du tableau serait vide dans l'émetteur
             if (bille != null && bille.activeSelf)
             {
                 count++;

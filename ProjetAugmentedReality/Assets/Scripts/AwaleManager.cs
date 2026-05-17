@@ -5,18 +5,16 @@ public class AwaleManager : MonoBehaviour
     public static AwaleManager Instance;
 
     [Header("Plateau de jeu")]
-    [Tooltip("Les 12 cases du plateau. Indices 0 à 5 pour J1, 6 à 11 pour J2.")]
     public Case[] plateau = new Case[12];
 
     public Base baseJoueur1;
     public Base baseJoueur2;
 
-    [Header("État du jeu")]
+    [Header("Etat du jeu")]
     public bool tourJoueur1 = true;
 
-    void Awake()
+    void Awake() //Singleton
     {
-
         if (Instance == null) Instance = this;
     }
 
@@ -29,20 +27,15 @@ public class AwaleManager : MonoBehaviour
 
         if (tourJoueur1 && (indexCase < 0 || indexCase > 5)) return;
         if (!tourJoueur1 && (indexCase < 6 || indexCase > 11)) return;
-
-
         if (caseCliquee.totalBilles == 0) return;
-
-
+        
         int billesEnMain = caseCliquee.TakeAllBilles();
         int indexActuel = indexCase;
 
-        // 4. Semer les billes
         while (billesEnMain > 0)
         {
             indexActuel = (indexActuel + 1) % 12; 
-
- 
+            
             if (indexActuel == indexCase) continue;
 
             plateau[indexActuel].AddBille();
@@ -50,8 +43,6 @@ public class AwaleManager : MonoBehaviour
         }
 
         Capturer(indexActuel);
-
-
         tourJoueur1 = !tourJoueur1;
     }
 
@@ -63,7 +54,6 @@ public class AwaleManager : MonoBehaviour
         while (estCampAdverse)
         {
             int nbBilles = plateau[dernierIndex].totalBilles;
-
    
             if (nbBilles == 2 || nbBilles == 3)
             {

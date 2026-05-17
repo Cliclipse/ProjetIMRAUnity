@@ -30,6 +30,7 @@ public class Plateau : MonoBehaviour
                 caseActuelle.getTotalBille() == 3) // dernière bille placée
             {
                 scores[joueur] += caseActuelle.getTotalBille();
+                Base
                 caseActuelle.Vider();
             }
         }
